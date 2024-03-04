@@ -8,16 +8,11 @@
   <title>Document</title>
 </head>
 <body>
-{% for users in myusers %}
-  {{ users.username }}
-  {{ users.fullname }}
-  {{ users.age }}
-  {{ users.date}}
-  {{ users.email }}
-  {{ users.password }}
+{% for users in myproducts%}
+ {{ Product.product_name }}
+  {{ Product.product_price }}
+  {{ Product.product_quantity }}
   <br>
-
-
 
 {% endfor %}
 </body>

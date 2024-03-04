@@ -1,3 +1,5 @@
+
+{% extends 'inner-page.html' %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,18 +9,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
-<body>
-{% for users in myusers %}
-  {{ users.username }}
-  {{ users.fullname }}
-  {{ users.age }}
-  {{ users.date}}
-  {{ users.email }}
-  {{ users.password }}
-  <br>
+<body> 
+{% block body %}
+	<h2>Welcome{{ member.username }}. You're logged in as an admin</h2>
+
+  <a href="{% url 'upload' %}" class="btn btn-success">Upload</a>
+{% endblock %}
 
 
-
-{% endfor %}
 </body>
 </html>
